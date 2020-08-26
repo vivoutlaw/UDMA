@@ -16,7 +16,7 @@ git clone https://github.com/almazan/deep-image-retrieval.git
 cd deep-image-retrieval/dirtorch
 mkdir data && cd data
 ```
-- Download the pre-trained model: [Resnet101-Tl-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6) available from [Deep Image Retrieval](https://github.com/almazan/deep-image-retrieval) and save it in the data folder.
+- Download the pre-trained model: [Resnet101-Tl-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6) available from [Deep Image Retrieval](https://github.com/almazan/deep-image-retrieval) and save it in the `data` folder.
 - setup vitual environment
 ```bash
 cd ../..
