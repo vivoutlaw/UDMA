@@ -84,7 +84,7 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 If you find the code and datasets useful in your research, please cite:
 ```    
 @inproceedings{udma,
-     author    = {Authors}, 
+     author    = {Vivek Sharma, Gabriela Csurka, Naila Murray, Diane Larlus, M. Saquib Sarfraz, and Rainer Stiefelhagen}, 
      title     = {Unsupervised Meta-Domain Adaptation for Fashion Retrieval}, 
      booktitle = {Preprint},
      year      = {2020}
