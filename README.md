@@ -2,7 +2,7 @@
 
 ## UDMA-MLP: Pre-trained model evaluation
 <div class="text-blue mb-2">
-###### Feature extraction using pre-trained UDMA-MLP model 
+    ###### Feature extraction using pre-trained UDMA-MLP model 
 </div>
     >> CUDA_VISIBLE_DEVICES=0 python test_mlp.py  --WS=WS5 --model-name=DeepFashion --comb=L12 --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=45000 --batch-size=2000 --resume --finch-part=0
 ###### Quantitative Results: DF test set, DF-BL, UDMA-MLP
