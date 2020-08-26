@@ -19,10 +19,8 @@
     python -W ignore weighting_strategy_part1.py --finch-part=0
     python -W ignore weighting_strategy_part1.py --finch-part=0
     python -W ignore weighting_strategy_part2.py --comb=L12 --optimizer=ADAM --finch-part=0 
-
 ###### MLP Training
     CUDA_VISIBLE_DEVICES=0 python -W ignore train_mlp.py  --WS=WS5 --dataset=DeepFashion --comb=L12 --optimizer=ADAM  --num-threads=8 --batch-size=128 --lr=1e-4 --resume-df --load-epoch-df=60 --epochs=45000 --finch-part=0 --batch-category-size=12 
-
 ### Citation
 If you find the code and datasets useful in your research, please cite:
     
