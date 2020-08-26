@@ -6,6 +6,32 @@
 - Linux or OSX
 - NVIDIA GPU + CUDA CuDNN (CPU mode and CUDA without CuDNN may work with minimal modification, but untested)
 
+### Getting Started
+```bash
+mkdir UDMA_Codebase && cd UDMA_Codebase
+```
+- Clone this repo:
+```bash
+git clone https://github.com/almazan/deep-image-retrieval.git
+cd deep-image-retrieval/dirtorch
+mkdir data && cd data
+```
+- Download the pre-trained model: [Resnet101-Tl-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6) available from [Deep Image Retrieval](https://github.com/almazan/deep-image-retrieval) and save it in the data folder.
+- setup vitual environment
+```bash
+cd ../..
+python3 -m venv venv
+source venv/bin/activate
+```
+- Install packages
+```bash
+pip install torch torchvision
+pip install pytorch-metric-learning
+pip install pandas
+pip install h5py matplotlib
+pip install opencv-python
+```
+
 ## Datasets
 Download the datasets using the following script. Please cite their papers if you use the data.
 ```bash
