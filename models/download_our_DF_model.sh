@@ -1,6 +1,6 @@
 FILE=$1
 
-if [[  $FILE != "DeepFashion"]]; then
+if [[  $FILE != "DeepFashion" ]]; then
   echo "Available model pre-trained on DeepFashion (trainval set)"
   exit 1
 fi
