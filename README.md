@@ -1,5 +1,17 @@
 # Unsupervised Meta-Domain Adaptation for Fashion Retrieval (UDMA)
 
+## Setup
+
+### Prerequisites
+- Linux or OSX
+- NVIDIA GPU + CUDA CuDNN (CPU mode and CUDA without CuDNN may work with minimal modification, but untested)
+
+## Datasets
+Download the datasets using the following script. Please cite their papers if you use the data.
+```bash
+bash ./datasets/download_dataset.sh dataset_name
+```
+
 ## UDMA-MLP: Pre-trained model evaluation
 - `Feature extraction using pre-trained UDMA-MLP model`: 
 ```bash
