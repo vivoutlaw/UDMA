@@ -82,7 +82,7 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 >> CUDA_VISIBLE_DEVICES=0,1,2,3 python main_train_df.py --dataset=DeepFashion --df-comb=ALL --optimizer=ADAM --num-threads=8 --batch-size=128 --lr=1e-4 --epochs=60 --checkpoint=../dirtorch/data/Resnet101-TL-GeM.pt
 ```
 - `Pre-trained model is available here`: [DeepFashion Resnet101-TL-GeM model](xxx)
-- After the model is trained, we utilize the last `fc` layer of this model for `UDMA-MLP`.
+- After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
 - `Script for feature extraction`:
 ```bash
 >> 
