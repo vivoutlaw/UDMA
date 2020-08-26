@@ -67,6 +67,10 @@ mAP = 0.2430, r1 precision = 0.3592,  r5 precision = 0.4761,  r10 precision = 0.
 >> python -W ignore weighting_strategy_part1.py --finch-part=0
 >> python -W ignore weighting_strategy_part2.py --comb=L12 --optimizer=ADAM --finch-part=0 
 ```
+-  Download the pre-trained model trained on DeepFashion (`trainval set`) using Resnet101-TL-GeM model.
+```bash
+bash ./models/download_our_DF_model.sh DeepFashion
+```
 - `Script for UDMA-MLP training`:
 ```bash
 >> CUDA_VISIBLE_DEVICES=0 python -W ignore train_mlp.py  --WS=WS5 --dataset=DeepFashion --comb=L12 --optimizer=ADAM  --num-threads=8 --batch-size=128 --lr=1e-4 --resume-df --load-epoch-df=60 --epochs=45000 --finch-part=0 --batch-category-size=12 
@@ -83,10 +87,6 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 - `Script for training the full-model`:
 ```bash
 >> CUDA_VISIBLE_DEVICES=0,1,2,3 python main_train_df.py --dataset=DeepFashion --df-comb=ALL --optimizer=ADAM --num-threads=8 --batch-size=128 --lr=1e-4 --epochs=60 --checkpoint=../dirtorch/data/Resnet101-TL-GeM.pt
-```
--  Download the pre-trained model trained on DeepFashion (`trainval set`) using Resnet101-TL-GeM model.
-```bash
-bash ./models/download_our_DF_model.sh DeepFashion
 ```
 - After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
 - Optional. `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please contact Naila Murray (at naila.murray@naverlabs.com). Also modify `path_to_images_` with correct path to images.
