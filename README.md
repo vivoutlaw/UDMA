@@ -1,6 +1,6 @@
 # Unsupervised Meta-Domain Adaptation for Fashion Retrieval (UDMA)
 
-PyTorch implementation to learn a domain invariant representa-tion for cross-domain fashion item retrieval, for example:
+PyTorch implementation to learn a domain invariant representation for cross-domain fashion item retrieval, for example:
 <img src="method.jpg" width="900px"/>
 
 ### Prerequisites
