@@ -22,11 +22,11 @@ source venv/bin/activate
 ```
 - Install packages
 ```bash
-pip install torch torchvision
-pip install pytorch-metric-learning
-pip install pandas
-pip install h5py matplotlib
-pip install opencv-python
+pip install torch==1.3.1 torchvision==0.4.2
+pip install pytorch-metric-learning==0.9.65
+pip install pandas==0.25.3
+pip install h5py==2.10.0 matplotlib==3.1.2
+pip install opencv-python==4.1.2.30
 ```
 - Clone the `UDMA` repo in `deep-image-retrieval`
 ```bash
