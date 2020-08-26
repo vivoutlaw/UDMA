@@ -7,7 +7,7 @@ fi
 
 echo "Specified [$FILE]"
 
-URL=https://cvhci.anthropomatik.kit.edu/~vsharma/DeepFashion.tar.gz
+URL=https://cvhci.anthropomatik.kit.edu/~vsharma/features/$FILE.tar.gz
 TAR_FILE=./features/$FILE.tar.gz
 TARGET_DIR=./features/$FILE/
 wget -N $URL -O $TAR_FILE
