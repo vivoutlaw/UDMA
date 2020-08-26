@@ -81,7 +81,7 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 ```bash
 >> CUDA_VISIBLE_DEVICES=0,1,2,3 python main_train_df.py --dataset=DeepFashion --df-comb=ALL --optimizer=ADAM --num-threads=8 --batch-size=128 --lr=1e-4 --epochs=60 --checkpoint=../dirtorch/data/Resnet101-TL-GeM.pt
 ```
--  Download the pre-trained model trained on DeepFashion (`trainval set`) using [Resnet101-TL-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6)
+-  Download the pre-trained model trained on DeepFashion (`trainval set`) using Resnet101-TL-GeM model.
 ```bash
 bash ./models/download_our_DF_model.sh DeepFashion
 ```
