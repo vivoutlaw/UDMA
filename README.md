@@ -61,7 +61,7 @@ mAP = 0.2430, r1 precision = 0.3592,  r5 precision = 0.4761,  r10 precision = 0.
 >> python -W ignore weighting_strategy_part1.py --finch-part=0
 >> python -W ignore weighting_strategy_part2.py --comb=L12 --optimizer=ADAM --finch-part=0 
 ```
-- `MLP Training`:
+- `Script for UDMA-MLP training`:
 ```bash
 >> CUDA_VISIBLE_DEVICES=0 python -W ignore train_mlp.py  --WS=WS5 --dataset=DeepFashion --comb=L12 --optimizer=ADAM  --num-threads=8 --batch-size=128 --lr=1e-4 --resume-df --load-epoch-df=60 --epochs=45000 --finch-part=0 --batch-category-size=12 
 ```
@@ -74,12 +74,17 @@ In our work, we utilized both `train` and `val` set of DeepFashion for model tra
 >> eval_df_retrieval('DeepFashion', 'DeepFashion_ADAM_ALL', 60, 'X', 'regular') % DF test set
 mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.5994, r20 precision = 0.6712,  r50 precision = 0.7603
 ```
-- `Script for finetuning the full model`:
+- `Script for finetuning the full model on DeepFashion`:
 ```bash
 >> CUDA_VISIBLE_DEVICES=0,1,2,3 python main_train_df.py --dataset=DeepFashion --df-comb=ALL --optimizer=ADAM --num-threads=8 --batch-size=128 --lr=1e-4 --epochs=60 --checkpoint=../dirtorch/data/Resnet101-TL-GeM.pt
 ```
 - `Pre-trained model is available here`: [DeepFashion Resnet101-TL-GeM model](xxx)
 - After the model is trained, we utilize the last `fc` layer of this model for `UDMA-MLP`.
+
+
+
+
+
 ## Citation
 If you find the code and datasets useful in your research, please cite:
 ```    
