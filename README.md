@@ -35,7 +35,7 @@ pip install opencv-python
 ```
 
 ## Datasets
-Download the pre-extracted datasets using the following script. Please cite the `DeepFashion` and `Street2Shop` papers if you use the data.
+Download the pre-extracted features for both `DeepFashion` and `Street2Shop` datasets using the following script. The feature were extracted using our pre-trained model on DeepFashion. 
 ```bash
 bash ./datasets/download_dataset.sh dataset_name
 ```
