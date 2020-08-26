@@ -33,7 +33,7 @@ pip install opencv-python==4.1.2.30
 ```
 - Clone the `UDMA` repo in `deep-image-retrieval`
 ```bash
->> PYTHONPATH=$PYTHONPATH:PATH-TO/deep-image-retrieval
+>> PYTHONPATH=$PYTHONPATH:$PWD/deep-image-retrieval
 >> git clone https://github.com/vivoutlaw/UDMA.git
 >> cd UDMA
 ```
