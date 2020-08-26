@@ -86,7 +86,7 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 bash ./models/download_our_DF_model.sh DeepFashion
 ```
 - After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
-- `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please contact Naila Murray (at naila.murray@naverlabs.com). Also modify `path_to_images_` with correct path to images.
+- Optional. `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please contact Naila Murray (at naila.murray@naverlabs.com). Also modify `path_to_images_` with correct path to images.
 ```bash
 # TRAIN SET ############### DeepFashion evaluation and Street2Shop Features. 
 Train Set (fc feats) 
