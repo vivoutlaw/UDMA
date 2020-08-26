@@ -86,25 +86,25 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 bash ./models/download_our_DF_model.sh DeepFashion
 ```
 - After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
-- `Script for feature extraction`:
+- `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please contact Naila Murray (at naila.murray@naverlabs.com). Also modify `path_to_images_` with correct path to images.
 ```bash
 # TRAIN SET ############### DeepFashion evaluation and Street2Shop Features. 
-Train Set (X) -- run standard rmac_resnet/rmac_resnext.py
+Train Set (fc feats) 
 CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X
 CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X
 
 
-# Train Set (X-1) -- Commment lines after "x.squeeze_()" in rmac_resnet/rmac_resnext.py
+# Train Set (GEM normalized feats) -- Commment lines after "x.squeeze_()" in dirtorch/nets/rmac_resnext.py
 CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X-1
 CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X-1
 
 
 # Test Set ############### DeepFashion evaluation and Street2Shop Features. 
-Test Set (X) -- run standard rmac_resnet/rmac_resnext.py
+Test Set (fc feats)
 CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume  --layer=X
 CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume  --layer=X
 
-@Test Set (X-1) -- Commment lines after "x.squeeze_()" in rmac_resnet/rmac_resnext.py
+# Test Set (GEM normalized feats) -- Commment lines after "x.squeeze_()" in dirtorch/nets/rmac_resnext.py
 CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X-1
 CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X-1
 ```
