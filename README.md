@@ -128,7 +128,14 @@ If you find the code and datasets useful in your research, please cite:
     author    = {M. Saquib Sarfraz, Vivek Sharma and Rainer Stiefelhagen}, 
     title     = {Efficient Parameter-free Clustering Using First Neighbor Relations}, 
     booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-    pages = {8934--8943}
     year  = {2019}
 }
+
+@inproceedings{kucer,
+  title={A detect-then-retrieve model for multi-domain fashion item retrieval},
+  author={Kucer, Michal and Murray, Naila},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2019}
+}
+
 ```
