@@ -113,7 +113,7 @@ CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashio
 
 
 
-## Citation
+## Citations
 If you find the code and datasets useful in your research, please cite:
 ```    
 @inproceedings{udma,
