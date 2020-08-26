@@ -69,7 +69,7 @@ mAP = 0.2430, r1 precision = 0.3592,  r5 precision = 0.4761,  r10 precision = 0.
 >> CUDA_VISIBLE_DEVICES=0 python -W ignore train_mlp.py  --WS=WS5 --dataset=DeepFashion --comb=L12 --optimizer=ADAM  --num-threads=8 --batch-size=128 --lr=1e-4 --resume-df --load-epoch-df=60 --epochs=45000 --finch-part=0 --batch-category-size=12 
 ```
 ## Finetuning Full [Resnet101-TL-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6) on DeepFashion dataset
-In our work, we utilized both `train` and `val` set of DeepFashion for model train, and tested on `test` set. 
+In our work, we use both `train` and `val` set of DeepFashion for model train, and tested on `test` set. 
 - Change `train_test_type` from `trainval`  to `train` for training the model only on `train` set.
 - `Quantitative Results: DF test set`: 
 ```bash
