@@ -87,10 +87,26 @@ bash ./models/download_our_DF_model.sh DeepFashion
 ```
 - After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
 - `Script for feature extraction`:
-
--- Trainset
 ```bash
->> 
+TRAIN SET ############### DeepFashion evaluation and Street2Shop Features. 
+Train Set (X) -- run standard rmac_resnet/rmac_resnext.py
+CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X
+CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X
+
+
+Train Set (X-1) -- Commment lines after "x.squeeze_()" in rmac_resnet/rmac_resnext.py
+CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X-1
+CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X-1
+
+
+Test SET ############### DeepFashion evaluation and Street2Shop Features. 
+Test Set (X) -- run standard rmac_resnet/rmac_resnext.py
+CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume  --layer=X
+CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume  --layer=X
+
+Test Set (X-1) -- Commment lines after "x.squeeze_()" in rmac_resnet/rmac_resnext.py
+CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X-1
+CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=Street2Shop --load-epoch=60 --batch-size=256 --resume --layer=X-1
 ```
 
 
