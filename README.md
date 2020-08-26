@@ -28,9 +28,14 @@ pip install pandas
 pip install h5py matplotlib
 pip install opencv-python
 ```
+- Clone the `UDMA` repo in `deep-image-retrieval`
+```bash
+>> PYTHONPATH=$PYTHONPATH:PATH-TO/deep-image-retrieval
+>> cd UDMA
+```
 
 ## Datasets
-Download the datasets using the following script. Please cite their papers if you use the data.
+Download the pre-extracted datasets using the following script. Please cite the `DeepFashion` and `Street2Shop` papers if you use the data.
 ```bash
 bash ./datasets/download_dataset.sh dataset_name
 ```
