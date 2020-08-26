@@ -1,8 +1,7 @@
 # Unsupervised Meta-Domain Adaptation for Fashion Retrieval (UDMA)
 
 ### Prerequisites
-- Linux or OSX
-- NVIDIA GPU + CUDA CuDNN (CPU mode and CUDA without CuDNN may work with minimal modification, but untested)
+- Tested on Linux: Ubuntu 16.04.1, and CUDA-9.0
 
 ### Getting Started
 ```bash
