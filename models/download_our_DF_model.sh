@@ -7,11 +7,11 @@ fi
 
 echo "Specified [$FILE]"
 
-URL=https://cvhci.anthropomatik.kit.edu/~vsharma/UDMA/model/$FILE.tar.gz
-TAR_FILE=./features/$FILE.tar.gz
-TARGET_DIR=./features/$FILE/
+URL=https://cvhci.anthropomatik.kit.edu/~vsharma/UDMA/models/$FILE.tar.gz
+TAR_FILE=./models/$FILE.tar.gz
+TARGET_DIR=./models/$FILE/
 wget -N $URL -O $TAR_FILE
 mkdir -p $TARGET_DIR
-tar -zxvf $TAR_FILE -C ./features/
+tar -zxvf $TAR_FILE -C ./models/
 rm $TAR_FILE
 
