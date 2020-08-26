@@ -67,10 +67,19 @@ bash ./datasets/download_dataset.sh dataset_name
 ```
 ## Citation
 If you find the code and datasets useful in your research, please cite:
-    
-    @inproceedings{udma,
-        author    = {Authors}, 
-        title     = {Unsupervised Meta-Domain Adaptation for Fashion Retrieval}, 
-        booktitle = {Preprint},
-        year      = {2020}
-    }
+```    
+@inproceedings{udma,
+     author    = {Authors}, 
+     title     = {Unsupervised Meta-Domain Adaptation for Fashion Retrieval}, 
+     booktitle = {Preprint},
+     year      = {2020}
+}
+
+@inproceedings{finch,
+    author    = {M. Saquib Sarfraz, Vivek Sharma and Rainer Stiefelhagen}, 
+    title     = {Efficient Parameter-free Clustering Using First Neighbor Relations}, 
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    pages = {8934--8943}
+    year  = {2019}
+}
+```
