@@ -128,8 +128,6 @@ if __name__ == '__main__':
 											help='DeepFashion | DF_S2S ')
 	parser.add_argument('--eval-dataset', type=str, default='XXX',
 											help='DeepFashion | Street2Shop ')
-	parser.add_argument('--seed', type=int, default=100, metavar='S',
-											help='random seed (default: 1)')
 	parser.add_argument('--WS', type=str, default=None,
 											help='WS5 | WS6 | WS7')
 	parser.add_argument('--resume', '-r', action='store_true')
@@ -147,13 +145,6 @@ if __name__ == '__main__':
 
 	# Device configuration
 	device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
-	# Seeding
-	torch.manual_seed(args.seed)
-	np.random.seed(args.seed)
-
-	if device == 'cuda':
-		torch.cuda.manual_seed(args.seed)
 
 	batch_size = args.batch_size
 	model_name = args.model_name
