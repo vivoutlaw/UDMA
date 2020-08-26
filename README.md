@@ -31,13 +31,16 @@ pip install opencv-python
 - Clone the `UDMA` repo in `deep-image-retrieval`
 ```bash
 >> PYTHONPATH=$PYTHONPATH:PATH-TO/deep-image-retrieval
+>> git clone https://github.com/vivoutlaw/UDMA.git
 >> cd UDMA
 ```
 
 ## Datasets
-Download the pre-extracted features for both `DeepFashion` and `Street2Shop` datasets using the following script. The feature were extracted using our pre-trained model on DeepFashion. 
+Download the pre-extracted features for both `DeepFashion` and `Street2Shop` datasets using the following script. The feature were extracted using our pre-trained model on DeepFashion. Trainset (`ClusteringFeats`) and Testset (`Street2Shop` | `DeepFashion`)
 ```bash
-bash ./datasets/download_dataset.sh dataset_name
+bash ./features/download_dataset.sh Street2Shop
+bash ./features/download_dataset.sh DeepFashion
+bash ./features/download_dataset.sh ClusteringFeats
 ```
 
 ## UDMA-MLP: Pre-trained model evaluation
@@ -80,8 +83,10 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 ```
 - `Pre-trained model is available here`: [DeepFashion Resnet101-TL-GeM model](xxx)
 - After the model is trained, we utilize the last `fc` layer of this model for `UDMA-MLP`.
-
-
+- `Script for feature extraction`:
+```bash
+>> 
+```
 
 
 
