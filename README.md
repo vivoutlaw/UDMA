@@ -58,9 +58,9 @@ bash ./features/download_dataset.sh ClusteringFeats
 ```bash
 >> cd evaluation_scripts
 >> eval_final_s2s_retrieval('Street2Shop', 'DeepFashion_ADAM_ALL', 60, 'X', 'regular') % DF-BL
-mAP = 0.2283, r1 precision = 0.3298,  r5 precision = 0.4470,  r10 precision = 0.4883, r20 precision = 0.5355, r50 precision = 0.5921
+mAP = 0.2297, r1 precision = 0.3297,  r5 precision = 0.4508,  r10 precision = 0.4921, r20 precision = 0.5381, r50 precision = 0.5939
 >> eval_final_mlp_s2s_retrieval('Street2Shop', 'DeepFashion_ADAM_ALL', 60 , 'X', 'regular', 'L12_0_WS5', 45000) % UDMA-MLP
-mAP = 0.2430, r1 precision = 0.3592,  r5 precision = 0.4761,  r10 precision = 0.5241, r20 precision = 0.5644, r50 precision = 0.6210
+mAP = 0.2451, r1 precision = 0.3612,  r5 precision = 0.4774,  r10 precision = 0.5270, r20 precision = 0.5639, r50 precision = 0.6240
 ```
 
 ## UDMA-MLP: Finetuning MLP with pretrained DF-BL model weights
