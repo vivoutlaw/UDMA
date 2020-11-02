@@ -117,23 +117,23 @@ CUDA_VISIBLE_DEVICES=0 python main_extract_test_feats.py --model-name=DeepFashio
 If you find the code and datasets useful in your research, please cite:
 ```    
 @inproceedings{udma,
-     author    = {Vivek Sharma, Gabriela Csurka, Naila Murray, Diane Larlus, M. Saquib Sarfraz, and Rainer Stiefelhagen}, 
+     author    = {Vivek Sharma, Naila Murray, Diane Larlus, M. Saquib Sarfraz, Rainer Stiefelhagen, and Gabriela Csurka}, 
      title     = {Unsupervised Meta-Domain Adaptation for Fashion Retrieval}, 
-     booktitle = {Preprint},
+     booktitle = {WACV},
      year      = {2020}
 }
 
 @inproceedings{finch,
     author    = {M. Saquib Sarfraz, Vivek Sharma and Rainer Stiefelhagen}, 
     title     = {Efficient Parameter-free Clustering Using First Neighbor Relations}, 
-    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    booktitle = {CVPR},
     year  = {2019}
 }
 
 @inproceedings{kucer,
   title={A detect-then-retrieve model for multi-domain fashion item retrieval},
   author={Kucer, Michal and Murray, Naila},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  booktitle={CVPR Workshops},
   year={2019}
 }
 
