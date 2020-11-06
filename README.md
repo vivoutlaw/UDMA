@@ -120,7 +120,7 @@ If you find the code and datasets useful in your research, please cite:
      author    = {Vivek Sharma, Naila Murray, Diane Larlus, M. Saquib Sarfraz, Rainer Stiefelhagen, and Gabriela Csurka}, 
      title     = {Unsupervised Meta-Domain Adaptation for Fashion Retrieval}, 
      booktitle = {WACV},
-     year      = {2020}
+     year      = {2021}
 }
 
 @inproceedings{finch,
