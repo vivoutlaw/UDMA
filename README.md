@@ -92,7 +92,7 @@ mAP = 0.3075, r1 precision = 0.3107,  r5 precision = 0.5209,  r10 precision = 0.
 >> CUDA_VISIBLE_DEVICES=0,1,2,3 python main_train_df.py --dataset=DeepFashion --df-comb=ALL --optimizer=ADAM --num-threads=8 --batch-size=128 --lr=1e-4 --epochs=60 --checkpoint=../dirtorch/data/Resnet101-TL-GeM.pt
 ```
 - After the model is trained, we use the last `fc` layer of this model for `UDMA-MLP`.
-- Optional. `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please contact Naila Murray (at naila.murray@naverlabs.com). Also modify `path_to_images_` with correct path to images.
+- Optional. `Script for feature extraction`: Download [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/Consumer2ShopRetrieval.html) and [Street2Shop](http://www.tamaraberg.com/street2shop/) datasets. For bounding boxes of `Street2Shop`, please see `dataset_files`. Also modify `path_to_images_` with correct path to images.
 ```bash
 # Train Set (fc feats) ############### DeepFashion evaluation and Street2Shop Features. 
 CUDA_VISIBLE_DEVICES=0 python main_extract_train_feats.py --model-name=DeepFashion --df-comb=ALL --optimizer=ADAM --eval-dataset=DeepFashion --load-epoch=60 --batch-size=256 --resume --layer=X
