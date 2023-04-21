@@ -7,7 +7,7 @@ fi
 
 echo "Specified [$FILE]"
 
-URL=https://cvhci.anthropomatik.kit.edu/~vsharma/UDMA/models/$FILE.tar.gz
+URL=https://cvhci.anthropomatik.kit.edu/~datasets-publisher/published_datasets/domain_adaption/UDMA/models/$FILE.tar.gz
 TAR_FILE=./models/$FILE.tar.gz
 TARGET_DIR=./models/$FILE/
 wget -N $URL -O $TAR_FILE
