@@ -18,7 +18,7 @@ mkdir data && cd data
 ```
 - Download the pre-trained model: [Resnet101-TL-GeM model](https://drive.google.com/open?id=1vhm1GYvn8T3-1C4SPjPNJOuTU9UxKAG6) available from [Deep Image Retrieval](https://github.com/almazan/deep-image-retrieval) and save it in the `data` folder.
 ```bash
-wget https://cvhci.anthropomatik.kit.edu/~vsharma/UDMA/dirtorch_model/Resnet101-TL-GeM.pt
+wget https://cvhci.anthropomatik.kit.edu/~datasets-publisher/published_datasets/domain_adaption/UDMA/dirtorch_model/Resnet101-TL-GeM.pt
 ```
 - setup vitual environment
 ```bash
